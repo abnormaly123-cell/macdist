@@ -11,7 +11,8 @@ APP = ['convert_1144_gui.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': False,
-    'packages': ['pandas', 'openpyxl'],
+    'packages': ['pandas', 'openpyxl', 'tkinter'],
+    'includes': ['tkinter', '_tkinter'],
     'iconfile': None,
     'plist': {
         'CFBundleName': 'JDE Конвертер',
