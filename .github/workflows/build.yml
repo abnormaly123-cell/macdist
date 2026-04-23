@@ -1,0 +1,13 @@
+name: Build macOS app
+on: push
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: pip3 install pandas openpyxl py2app
+      - run: python3 setup_mac.py py2app
+      - uses: actions/upload-artifact@v3
+        with:
+          name: JDE_Конвертер
+          path: dist/
